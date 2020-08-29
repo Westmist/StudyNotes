@@ -46,7 +46,7 @@ $ git checkout  ID    #回退到指定ID的commit版本，ID使用git status命�
 #3.将公钥添加到Github账户中
 $ ssh -T git@github.com     #检查确认
 
-$ git remote add origin master  Git_URL  #添加远程仓库Git_URL
+$ git remote add origin  Git_URL  #添加远程仓库Git_URL
 $ git pull origin master     #从远程仓库拉取文件并合并
 $ git push origin master     #将本地仓库推送到远程库并合并
 ```
