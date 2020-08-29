@@ -26,7 +26,7 @@ $ git config --global user.email youremail@example.com
 $ git init
 ```
 #### 三、Git的基础操作
-[Git结构](./Images/git.jpg)
+![Git结构](./Images/git.jpg)
 
 * workspace：工作区
 * Index/staging area：暂存区/缓存区
