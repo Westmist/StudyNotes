@@ -36,8 +36,9 @@ SHOW INDEX FROM tablename|显示索引
 * 表头删除多列
 > ALTER TABLE tablename DROP field1, DROP field2
 * 修改表头字段及其约束
-> ALTER TABLE tablesname CHANGE oldfield newfield NEWTYPE [约束]
-
+> ALTER TABLE tablename CHANGE oldfield newfield NEWTYPE [约束]
+* 表头设置索引(索引提高了查询效率但降低了删改整的效率)
+> ALTER TABLE tablename ADD INDEX index_name(field);
 ---
 ##### 表头约束
 * 表头字段添加主键
@@ -66,4 +67,15 @@ SHOW INDEX FROM tablename|显示索引
 > ALTER TABLE srctablename RENAME destablename
 ---
 ##### 增删改查
-略~~~~~~~~~~~~~~~~~~~~~~
+* 排序查询(根据fieldA正序查询,如果fieldA相同,则根据fieldB倒序排序)
+> SELETC * FROM tablename ORDER fieldA ASC,fieldB DESC
+ * 分页查询(对于查询结果越过num1条记录,显示num2条记录)
+> SELECT * FROM tablename LIMIT num1,num2
+* 联合查询
+> SELECT * FROM tablename1 UNION SELECT * FROM tablename2
+* 分组查询
+> SELECT * FROM tablename GROUP BY (field)
+---
+#### 聚合函数
+* 求平均数并保留小数点后的num位
+> ROUND(AVG(field),num)
